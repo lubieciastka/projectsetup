@@ -1,0 +1,21 @@
+image: node:8
+
+stages:
+    - install
+    - tests
+
+install_npm:
+    stage: install
+    script:
+        - yarn install --pure-lockfile
+    artifacts:
+        expire_in: 1 hour
+        paths:
+            - node_modules/
+
+lint_and_test:
+    stage: tests
+    script:
+        - yarn "lint:css"
+        - yarn "lint:js"
+        - yarn "lint:wcag"
