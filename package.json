@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "repository": {
         "type": "git",
-        "url": "git@git.efigence.com:npm/frontend-basic-config.git"
+        "url": ""
     },
     "scripts": {
         "lint:js": "eslint src/js/**/*.js",
